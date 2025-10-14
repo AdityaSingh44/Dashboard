@@ -30,26 +30,66 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="center">
-            <form className="card" style={{ maxWidth: 480 }} onSubmit={submit}>
-                <h2 style={{ marginBottom: 6 }}>Register</h2>
-                {error && <div className="error">{error}</div>}
-                <label className="small">Name</label>
-                <input value={name} onChange={e => setName(e.target.value)} />
-                <label className="small">Email</label>
-                <input value={email} onChange={e => setEmail(e.target.value)} />
-                <label className="small">Password</label>
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                <label className="small">Role</label>
-                <select value={role} onChange={e => setRole(e.target.value)}>
-                    <option value="student">Student</option>
-                    <option value="teacher">Teacher</option>
-                </select>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
-                    <a href="/login" className="small">Already have an account? Login</a>
-                    <button type="submit">Register</button>
+        <div className="auth-container">
+            <div className="auth-card fade-in">
+                <div className="auth-header">
+                    <h1>Create Account</h1>
+                    <p>Join our learning platform</p>
                 </div>
-            </form>
+
+                <form className="auth-form" onSubmit={submit}>
+                    {error && <div className="alert alert-error">{error}</div>}
+
+                    <div className="form-group">
+                        <label className="form-label">Full Name</label>
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            placeholder="Enter your full name"
+                            required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Email Address</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            placeholder="Enter your email"
+                            required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Password</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            placeholder="Create a password"
+                            required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Role</label>
+                        <select value={role} onChange={e => setRole(e.target.value)}>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" className="btn">
+                        Create Account
+                    </button>
+                </form>
+
+                <div className="auth-footer">
+                    <a href="/login">Already have an account? Sign in here</a>
+                </div>
+            </div>
         </div>
     );
 }

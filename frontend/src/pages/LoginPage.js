@@ -23,19 +23,47 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="center" style={{ padding: 20 }}>
-            <form className="card" style={{ maxWidth: 420 }} onSubmit={submit}>
-                <h2 style={{ marginBottom: 6 }}>Login</h2>
-                {error && <div className="error">{error}</div>}
-                <label className="small">Email</label>
-                <input value={email} onChange={e => setEmail(e.target.value)} />
-                <label className="small">Password</label>
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
-                    <a href="/register" className="small">Don't have an account? Register</a>
-                    <button type="submit">Login</button>
+        <div className="auth-container">
+            <div className="auth-card fade-in">
+                <div className="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to your account</p>
                 </div>
-            </form>
+
+                <form className="auth-form" onSubmit={submit}>
+                    {error && <div className="alert alert-error">{error}</div>}
+
+                    <div className="form-group">
+                        <label className="form-label">Email Address</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            placeholder="Enter your email"
+                            required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Password</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            placeholder="Enter your password"
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" className="btn">
+                        Sign In
+                    </button>
+                </form>
+
+                <div className="auth-footer">
+                    <a href="/register">Don't have an account? Create one here</a>
+                </div>
+            </div>
         </div>
     );
 }
