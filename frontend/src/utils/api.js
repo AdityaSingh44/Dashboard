@@ -1,5 +1,5 @@
 const API = {
-    baseUrl: process.env.REACT_APP_API_URL || 'http://localhost:5000',
+    baseUrl: process.env.REACT_APP_API_URL || 'https://dashboard-o2pl.onrender.com',
     token: null,
     setToken(t) { this.token = t; },
     async request(path, options = {}) {
