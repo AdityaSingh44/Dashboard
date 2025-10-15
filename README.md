@@ -1,6 +1,6 @@
-# Assignment Workflow Portal
+# Dashboard Workflow Portal
 
-A comprehensive web application built with React.js and Node.js that provides a complete assignment management system for teachers and students. The portal features role-based authentication, workflow-driven assignment states, and a responsive user interface.
+A comprehensive web application built with React.js and Node.js that provides a complete management system for teachers and students. The portal features role-based authentication, workflow-driven assignment states, and a responsive user interface.
 
 ## 🚀 Features
 
@@ -43,7 +43,6 @@ A comprehensive web application built with React.js and Node.js that provides a 
 - **JWT (JSON Web Tokens)** - Secure authentication
 - **bcryptjs** - Password hashing and security
 - **CORS** - Cross-origin resource sharing
-- **dotenv** - Environment configuration
 
 ### Database Schema
 - **Users**: Name, email, password (hashed), role (teacher/student)
@@ -110,15 +109,7 @@ cd ../frontend
 npm install
 ```
 
-### 2. Environment Configuration
-Create a `.env` file in the `backend` directory:
-```env
-PORT=5000
-MONGO_URI=mongodb+srv://root:root@completecoding.qy8jdg8.mongodb.net/tailwebs?retryWrites=true&w=majority&appName=CompleteCoding
-JWT_SECRET=your_super_secret_jwt_key_here_make_it_long_and_random_123456789
-JWT_EXPIRE=30d
-NODE_ENV=development
-```
+
 
 ### 3. Populate Test Data (Optional)
 ```bash
@@ -250,72 +241,9 @@ Dashboard/
 - **Input Validation**: Both client-side and server-side validation
 - **Access Control**: Role-based permissions and route protection
 
-## 🚀 Deployment
 
-### Backend Deployment
-1. Set environment variables on hosting platform
-2. Ensure MongoDB connection string is accessible
-3. Deploy to services like Heroku, Railway, or AWS
 
-### Frontend Deployment
-1. Build the React application: `npm run build`
-2. Deploy to static hosting: Netlify, Vercel, or AWS S3
-3. Configure API URL for production environment
 
-## 🐛 Troubleshooting
 
-### Common Issues
-- **Connection Refused**: Ensure backend server is running on port 5000
-- **Authentication Errors**: Check JWT secret and token expiration
-- **Database Connection**: Verify MongoDB URI and network access
-- **CORS Errors**: Confirm frontend URL is allowed in CORS configuration
 
-### Development Tips
-- Use browser developer tools to inspect network requests
-- Check console logs for detailed error messages
-- Verify environment variables are loaded correctly
-- Test API endpoints with tools like Postman or curl
 
-## 📈 Future Enhancements
-
-### Potential Improvements
-- **File Uploads**: Support for document and image submissions
-- **Rich Text Editor**: Enhanced text formatting for assignments and answers
-- **Email Notifications**: Automated notifications for assignment updates
-- **Grading System**: Numeric grading with gradebooks
-- **Analytics Dashboard**: Assignment statistics and student progress
-- **Real-time Updates**: WebSocket integration for live updates
-- **Mobile Apps**: Native iOS/Android applications
-- **Advanced Filtering**: Search, sorting, and advanced filtering options
-
-### Performance Optimizations
-- **Database Indexing**: Optimize MongoDB queries
-- **Caching**: Redis caching for frequently accessed data
-- **CDN Integration**: Content delivery network for static assets
-- **Code Splitting**: Lazy loading for React components
-- **API Rate Limiting**: Prevent API abuse and improve stability
-
-## 👥 Contributing
-
-This project was built according to the specified requirements for an Assignment Workflow Portal. The implementation includes all requested features:
-
-- Single login page with role-based redirection
-- Teacher dashboard with complete assignment lifecycle management
-- Student dashboard with assignment viewing and submission capabilities
-- Proper workflow state transitions and business rule enforcement
-- Modern React.js and Node.js architecture with security best practices
-
-## 📄 License
-
-This project is created for educational and demonstration purposes. Please ensure appropriate licensing for any production use.
-
-## 🆘 Support
-
-For questions or issues with the assignment portal:
-
-1. Check the troubleshooting section above
-2. Review the detailed README files in `/backend` and `/frontend` directories
-3. Inspect browser console and server logs for error messages
-4. Verify all environment variables are correctly configured
-
-The application is fully functional and ready for testing with the provided test accounts and seeded data.
