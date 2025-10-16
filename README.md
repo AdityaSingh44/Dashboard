@@ -129,8 +129,7 @@ npm start
 ```
 
 ### 5. Access the Application
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
+- **url**: https://dashboard-1-6ifm.onrender.com
 
 ## 👤 Test Accounts
 

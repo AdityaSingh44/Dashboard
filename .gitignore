@@ -7,7 +7,7 @@ npm-debug.log*
 .env.test.local
 .env.production.local
 
-# Editor
+# Editors
 .vscode/
 .idea/
 .DS_Store
